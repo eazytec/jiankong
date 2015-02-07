@@ -1,0 +1,46 @@
+﻿body
+{
+	margin:0px;
+	text-align:center;
+}
+#myhead
+{	
+	 width:80%;
+	 height:94px;
+	 margin:auto;
+	 
+	 background-image:url(../img/2.jpg);
+}
+
+#mybunner
+{	
+	 width:437px;
+	 height:37px;
+	 margin:auto;
+	 background-image:url(../img/123.png);
+	 
+}
+
+
+#mybody
+{	
+	 width:80%;
+	 height:600px;
+	 margin:auto;
+	
+}
+#myleft
+{	
+	 width:80%;
+	 height:590px;
+	 margin:auto;
+	 float:left;
+}
+#myright
+{	
+
+	 height:1004px;
+	 margin:auto;
+	
+	
+}

@@ -1,0 +1,192 @@
+﻿
+/*----------系统默认情况的标签样式----------*/
+body 
+{
+	font-size:12px;	font-family:宋体;	color:Black;	
+	margin-bottom:0px; margin-left:0px; margin-right:0px; margin-top:0px;
+	scrollbar-face-color:   #DEE3E7;   
+  scrollbar-highlight-color:   #FFFFFF;   
+  scrollbar-shadow-color:   #DEE3E7;   
+  scrollbar-3dlight-color:   #D1D7DC;   
+  scrollbar-arrow-color:     #006699;   
+  scrollbar-track-color:   #EFEFEF;   
+  scrollbar-darkshadow-color:   #98AAB1   
+              
+}
+
+table
+{
+	font-size:12px;	font-family:宋体;	color:Black;
+}
+
+td
+{
+	font-size:12px;	font-family:宋体;	color:Black;
+}
+
+a
+{
+	font-size:12px;	font-family:宋体;	color:Black; text-decoration:none;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+.btnqry1
+{
+font-size: 12px; 
+cursor:pointer; 
+background: url(../images/btn/but_bg.gif); 
+border: 0px; 
+width: 80px; 
+height: 20px;
+table-layout:fixed;
+}
+.btnqry12
+{
+	color:Blue;
+font-size: 12px; 
+cursor:pointer; 
+background: url(../images/btn/but_bg_o.gif); 
+border: 0px; 
+width: 80px; 
+height: 20px;
+table-layout:fixed;
+}
+
+.btnqry2
+{
+font-size: 12px; 
+cursor:pointer; 
+background: url(../images/btn/btnbg1.gif); 
+border: 0px; 
+width: 100px; 
+height: 20px;
+table-layout:fixed;
+}
+.btnqry3
+{
+font-size: 12px; 
+cursor:pointer; 
+background: url(../images/btn/btnbg5.gif); 
+border: 0px; 
+width: 68px; 
+height: 21px;
+table-layout:fixed;
+}
+div.Nav
+{
+	SCROLLBAR-3DLIGHT-COLOR:#FFFFFF;  /*外边框亮*/
+	SCROLLBAR-DARKSHADOW-COLOR:#808080;      /*外边框暗*/
+	SCROLLBAR-TRACK-COLOR:#fafafa;     /*背景*/
+	SCROLLBAR-HIGHLIGHT-COLOR:#e8e8e8; /*3D亮边框*/
+	SCROLLBAR-SHADOW-COLOR:#f2f2f8;    /*3D边框暗*/
+	SCROLLBAR-FACE-COLOR:#f8f8ff;      /*3D背景*/
+	SCROLLBAR-ARROW-COLOR:#336699;     /*箭头#36361B*/
+}
+
+
+/*----------系统默认情况的标签样式----------*/
+.webmenu
+{
+	color:White;
+}
+.webmenu a
+{
+	color:White;
+	width:70px;
+	height:18px;
+	vertical-align:bottom ;
+	text-align:center;
+	font-size:13px;
+}
+.webmenu a:hover
+{
+	text-decoration:none;
+	color:Yellow;
+    background :#339966;
+}
+
+
+/*----------系统默认情况的标签样式----------*/
+.tbl1
+{
+	border-right: gray 1px solid;border-top: gray 1px solid;border-left: gray 1px solid;border-bottom: gray 1px solid;
+}
+
+.tbl2
+{
+	border-right: #f7f7f7 1px solid; 
+	border-top: #f7f7f7 1px solid; 
+	border-left: #f7f7f7 1px solid;
+}
+.tbl3
+{
+	border-right: #f7f7f7 1px solid;
+	border-left: #f7f7f7 1px solid; 
+	border-bottom: #f7f7f7 1px solid;
+}
+.tbl4
+{
+	border-right: #f7f7f7 1px solid;border-left: #f7f7f7 1px solid; border-bottom: #f7f7f7 1px solid
+}
+
+.td1
+{
+	font-size:14px;
+	color:Black;
+	font-weight:bold;
+	background-color:#f7f7f7;
+	border-bottom: #f0f0f0 1px solid;
+}
+
+.td2
+{
+	font-weight:bold;
+	font-size:12px;
+	border-bottom: #f7f7f7 1px solid;
+	background-color:#f9f9f9;
+}
+
+.td3
+{
+	font-size:12px;	color:green;border-bottom: #f7f7f7 1px solid;
+}
+
+.td4
+{
+	font-size:12px;border-bottom: #f7f7f7 1px solid;border-right: gray 1px solid;
+}
+
+.td5
+{
+	font-size:12px;border-bottom: #f7f7f7 1px solid;
+}
+
+.td6
+{
+	font-weight:bold;font-size:12px;border-bottom: #f7f7f7 1px solid;border-right: gray 1px solid;
+}
+.td7
+{
+	border-right: #f7f7f7 1px solid;
+}
+.td8
+{
+	font-size:12px;border-bottom: #f7f7f7 1px solid;
+}
+.a1
+{
+	font-size:14px;
+	color:Black;
+	font-weight:bold;
+	background-color:#f7f7f7;
+	border-bottom: #f0f0f0 1px solid;
+	}
+	    .tablelist {
+      border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+    border:solid #999; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+    border-width:1px 0 0 1px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+    }
+    .tablelist caption {font-size:14px;font-weight:bolder;}
+    .tablelist th,.tablelist td {border:solid #999;border-width:0 1px 1px 0;padding:2px;}
