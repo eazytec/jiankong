@@ -7,9 +7,9 @@
     <title>宜兴市环境监测项目公示平台</title>
     <link href="css/gongshi.css" rel="stylesheet" type="text/css" />
     <link href="css/cssMain.css" rel="stylesheet" type="text/css" />
-
     <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
     <script src="js/jquery-1.4.2-vsdoc.js" type="text/javascript"></script>
+
 
     <script src="js/Monitor.js" type="text/javascript"></script>
 </head>
@@ -135,7 +135,7 @@
     </td>
     </tr>
     </table>
-   
+ 
    
     </div>
     

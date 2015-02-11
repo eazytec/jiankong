@@ -17,7 +17,7 @@ namespace DTcms.Web.gongshi
             if (!IsPostBack)
             {
                 getAQI();
-                //RptBind("date desc");
+                RptBind("date desc");
             }
         }
 
@@ -36,9 +36,9 @@ namespace DTcms.Web.gongshi
         private void RptBind(string _orderby)
         {
 
-            //BLL.gonggao bll = new BLL.gonggao();
-            //this.rptList.DataSource = bll.GetGonggaoList(_orderby);
-            //this.rptList.DataBind();
+            BLL.gonggao bll = new BLL.gonggao();
+            this.rptList.DataSource = bll.GetGonggaoList(_orderby);
+            this.rptList.DataBind();
 
 
         }

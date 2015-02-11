@@ -45,8 +45,12 @@
     <Compile Include="category.cs" />
     <Compile Include="article_comment.cs" />
     <Compile Include="article_diggs.cs" />
+    <Compile Include="device.cs" />
+    <Compile Include="device_info.cs" />
+    <Compile Include="discharge_companies.cs" />
     <Compile Include="distribution.cs" />
     <Compile Include="download_attach.cs" />
+    <Compile Include="gonggao.cs" />
     <Compile Include="goods_group_price.cs" />
     <Compile Include="mail_template.cs" />
     <Compile Include="manager.cs" />
