@@ -7,22 +7,20 @@ using System.Data;
 
 namespace DTcms.BLL
 {
-    class jsnd  //计算浓度
+   public partial class jsnd  //计算浓度
     {
-        public static void b(string begindate,string enddate,string canshu) {
-            float sum=0;
-            int n = 0;
-            string sql = "select " + canshu + " from AirIndex where dtt between '" + begindate + "'and '" + enddate + "'";
+        public static string jisuannongdu(string date,string siteid) {
+
+            string sql = "select PollutantCode,sum(monValue)/count(*) from Air_1h_2015_Src where stationCode='"+siteid+"' and TimePoint between '" + date + "'+00:00:00 and '" + date + "'+23:59:59  group by PollutantCode ";
             DataTable dt = DbHelperSQL.Query(sql).Tables[0];
+            string str="" ;
             foreach (DataRow dr in dt.Rows)
             {
-                float canshuzhi = float.Parse(dt.Rows[0][canshu].ToString());
-
-                sum = sum + canshuzhi;
-
-                n = n + 1;
+                //String canshu =dr[0].ToString;
+               // String avgValue = dr[1].ToString;
+                //str+=canshu+","+avgValue+";";
             }
-            float nongdu = sum / n;
+            return str;
         }
     }
 }

@@ -47,9 +47,9 @@ namespace DTcms.web.siteinfo
         {
             BLL.gonggao bll = new BLL.gonggao();
             Model.gonggao model = bll.GetModel(_id);
-            txtTitle.Text = model.title;
-            txtContent.Text = model.content;
-            txtName.Text = model.name;
+            //txtTitle.Text = model.title;
+           // txtContent.Text = model.content;
+            //txtName.Text = model.name;
         }
         #endregion
 
@@ -59,9 +59,9 @@ namespace DTcms.web.siteinfo
             bool result = true;
             Model.gonggao model = new Model.gonggao();
             BLL.gonggao bll = new BLL.gonggao();
-            model.title = txtTitle.Text;
-            model.content = txtContent.Text;
-            model.name = txtName.Text;
+           // model.title = txtTitle.Text;
+           // model.content = txtContent.Text;
+           // model.name = txtName.Text;
 
             if (bll.Add(model) < 1)
             {
@@ -78,9 +78,9 @@ namespace DTcms.web.siteinfo
             BLL.gonggao bll = new BLL.gonggao();
             Model.gonggao model = bll.GetModel(_id);
 
-            model.title = txtTitle.Text;
-            model.content = txtContent.Text;
-            model.name = txtName.Text;
+          //  model.title = txtTitle.Text;
+//model.content = txtContent.Text;
+      //      model.name = txtName.Text;
 
             if (!bll.Update(model))
             {

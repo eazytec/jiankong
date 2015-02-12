@@ -54,6 +54,8 @@
     <Compile Include="article_goods.cs" />
     <Compile Include="exportExcel.cs" />
     <Compile Include="gonggao.cs" />
+    <Compile Include="jsAQI.cs" />
+    <Compile Include="jsnd.cs" />
     <Compile Include="mail_template.cs" />
     <Compile Include="manager.cs" />
     <Compile Include="manager_log.cs" />
@@ -87,6 +89,10 @@
     <ProjectReference Include="..\DTcms.DAL\DTcms.DAL.csproj">
       <Project>{A18F58A7-3A14-4558-BA3F-42D61E00909F}</Project>
       <Name>DTcms.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTcms.DBUtility\DTcms.DBUtility.csproj">
+      <Project>{E2C9435B-CB68-465A-BDF9-333F2D75E81B}</Project>
+      <Name>DTcms.DBUtility</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTcms.Model\DTcms.Model.csproj">
       <Project>{EA3A3BD8-2B5F-4077-9D8A-DFF27CDD4C12}</Project>

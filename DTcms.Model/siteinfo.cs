@@ -10,8 +10,8 @@ namespace DTcms.Model
         private int _id;
         private string _stationId;
         private string _stationName;
+        private String _stationType;
         private string _createtime;
-        private string _install_person;
 
         public int id
         {
@@ -19,53 +19,19 @@ namespace DTcms.Model
             set { _id = value; }
         }
 
-        public string install_address
+        public string stationId
         {
-            get { return _; }
-            set { _install_address = value; }
+            get { return _stationId; }
+            set { _stationId = value; }
         }
 
-        public string telephone
-        {
-            get { return _telephone; }
-            set { _telephone = value; }
-        }
+        public string stationName
+       {
+           get {return _stationName;}
+           set {_stationName=value;}
+       }
 
-        public string install_date
-        {
-            get { return _install_date; }
-            set { _install_date = value; }
-        }
 
-        public string install_person
-        {
-            get { return _install_person; }
-            set { _install_person = value; }
-        }
-
-        public string ph
-        {
-            get { return _ph; }
-            set { _ph = value; }
-        }
-
-        public string yangqi
-        {
-            get { return _yangqi; }
-            set { _yangqi = value; }
-        }
-
-        public int device_ids
-        {
-            get { return _device_ids; }
-            set { _device_ids = value; }
-        }
-
-        public int shenhe
-        {
-            get { return _shenhe; }
-            set { _shenhe = value; }
-        }
         #endregion Model
 
 

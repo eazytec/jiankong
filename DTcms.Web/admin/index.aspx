@@ -197,8 +197,8 @@
                         实时数据</a></li>
                     <li><a href="javascript:f_addTab('zhandian','AQI实时报表','../datacontrol/currentAQI.aspx')">
                         AQI实时报表</a></li>
-                    <li><a href="javascript:f_addTab('zhandian','地图信息','../baseInfo/sitemap.aspx')">空气质量日报</a></li>
-                    <li><a href="javascript:f_addTab('zhandian','地图信息','../baseInfo/sitemap.aspx')">水质</a></li>
+                    <li><a href="javascript:f_addTab('kqrb','地图信息','../datacontrol/Currentdata.aspx')">空气质量日报</a></li>
+                    <li><a href="javascript:f_addTab('zhandian1','地图信息','../baseInfo/sitemap.aspx')">水质</a></li>
                 </ul>
             </div>
             <div title="站点运行管理" iconcss="menu-icon-member">
