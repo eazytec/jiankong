@@ -11,7 +11,7 @@ namespace DTcms.Model
         private string _stationId;
         private string _stationName;
         private String _stationType;
-        private string _createtime;
+        private DateTime _createTime = DateTime.Now;
 
         public int id
         {
@@ -31,7 +31,17 @@ namespace DTcms.Model
            set {_stationName=value;}
        }
 
+        public string stationType
+        {
+            get { return _stationType; }
+            set { _stationType = value; }
+        }
 
+        public DateTime createTime
+        {
+            get { return _createTime; }
+            set { _createTime = value; }
+        }
         #endregion Model
 
 

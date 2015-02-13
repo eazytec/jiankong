@@ -12,7 +12,7 @@
 <link href="../admin/images/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../scripts/ui/js/ligerBuild.min.js"></script>
 <script type="text/javascript" src="../js/function.js"></script>
-<script src="/Calendar/JS/calendar2.js" type="text/javascript"></script>
+    <script src="../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
 </head>
 <body class="mainbody">
 <form id="form1" runat="server">
@@ -26,10 +26,10 @@
             </span>
                  <span>时间：</span> 
                   <span>
-                      <asp:TextBox ID="txtBegindate" onfocus="setday(this)" runat="server" CssClass="txtInput"></asp:TextBox>  
+                      <asp:TextBox ID="txtBegindate" onclick="WdatePicker()" runat="server" CssClass="txtInput"></asp:TextBox>  
                   </span>                   
                 <span>至
-                <asp:TextBox ID="txtEnddate" onfocus="setday(this)" runat="server" CssClass="txtInput"></asp:TextBox>
+                <asp:TextBox ID="txtEnddate" onclick="WdatePicker()" runat="server" CssClass="txtInput"></asp:TextBox>
                     </span>
                 <asp:Button ID="btnSearch" runat="server" Text="搜 索" CssClass="btnSearch" onclick="btnSearch_Click"/>
 		    </div>

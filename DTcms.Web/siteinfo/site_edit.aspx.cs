@@ -12,9 +12,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using DTcms.Common;
 
-namespace DTcms.web.siteinfo
+namespace DTcms.Web.siteinfo
 {
-    public partial class gonggao_edit : Web.UI.ManagePage
+    public partial class site_edit : Web.UI.ManagePage
     {
         protected string action = DTEnums.ActionEnum.Add.ToString(); //操作类型
         private int id = 0;
@@ -45,11 +45,12 @@ namespace DTcms.web.siteinfo
         #region 赋值操作=================================
         private void ShowInfo(int _id)
         {
-            BLL.gonggao bll = new BLL.gonggao();
-            Model.gonggao model = bll.GetModel(_id);
-            //txtTitle.Text = model.title;
-           // txtContent.Text = model.content;
-            //txtName.Text = model.name;
+            BLL.siteinfo bll = new BLL.siteinfo();
+            Model.siteinfo model = bll.GetModel(_id);
+            txtStationId.Text = model.stationId;
+            txtStationName.Text = model.stationName;
+            txtStationType.Text = model.stationType;
+            txtCreateTime.Text = model.createTime.ToString();
         }
         #endregion
 
@@ -57,11 +58,12 @@ namespace DTcms.web.siteinfo
         private bool DoAdd()
         {
             bool result = true;
-            Model.gonggao model = new Model.gonggao();
-            BLL.gonggao bll = new BLL.gonggao();
-           // model.title = txtTitle.Text;
-           // model.content = txtContent.Text;
-           // model.name = txtName.Text;
+            Model.siteinfo model = new Model.siteinfo();
+            BLL.siteinfo bll = new BLL.siteinfo();
+            model.stationId = txtStationId.Text;
+            model.stationName = txtStationName.Text;
+            model.stationType = txtStationType.Text;
+            model.createTime = DateTime.Parse(txtCreateTime.Text);
 
             if (bll.Add(model) < 1)
             {
@@ -75,12 +77,13 @@ namespace DTcms.web.siteinfo
         private bool DoEdit(int _id)
         {
             bool result = true;
-            BLL.gonggao bll = new BLL.gonggao();
-            Model.gonggao model = bll.GetModel(_id);
+            BLL.siteinfo bll = new BLL.siteinfo();
+            Model.siteinfo model = bll.GetModel(_id);
 
-          //  model.title = txtTitle.Text;
-//model.content = txtContent.Text;
-      //      model.name = txtName.Text;
+            model.stationId = txtStationId.Text;
+            model.stationName = txtStationName.Text;
+            model.stationType = txtStationType.Text;
+            model.createTime = DateTime.Parse(txtCreateTime.Text);
 
             if (!bll.Update(model))
             {
@@ -100,7 +103,7 @@ namespace DTcms.web.siteinfo
                     JscriptMsg("保存过程中发生错误啦！", "", "Error");
                     return;
                 }
-                JscriptMsg("修改公告信息成功啦！", "gonggao_list.aspx", "Success");
+                JscriptMsg("修改公告信息成功啦！", "site_list.aspx", "Success");
             }
             else //添加
             {
@@ -109,7 +112,7 @@ namespace DTcms.web.siteinfo
                     JscriptMsg("保存过程中发生错误啦！", "", "Error");
                     return;
                 }
-                JscriptMsg("添加公告信息成功啦！", "gonggao_list.aspx", "Success");
+                JscriptMsg("添加公告信息成功啦！", "site_list.aspx", "Success");
             }
         }
 

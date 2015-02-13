@@ -188,24 +188,26 @@
         <div position="left" title="管理菜单" id="global_left_nav">
             <div title="站点信息" iconcss="menu-icon-member">
                 <ul class="nlist">
-                    <li><a href="javascript:f_addTab('zhandian','站点信息','../baseInfo/sitemap.aspx')">站点信息</a></li>
+                    <li><a href="javascript:f_addTab('sitemap','站点信息','../baseInfo/sitemap.aspx')">站点信息</a></li>
                 </ul>
             </div>
             <div title="站点数据监控" iconcss="menu-icon-member">
                 <ul class="nlist">
                     <li><a href="javascript:f_addTab('shishi','实时数据','../datacontrol/Currentdata.aspx')">
                         实时数据</a></li>
-                    <li><a href="javascript:f_addTab('zhandian','AQI实时报表','../datacontrol/currentAQI.aspx')">
-                        AQI实时报表</a></li>
-                    <li><a href="javascript:f_addTab('kqrb','地图信息','../datacontrol/Currentdata.aspx')">空气质量日报</a></li>
-                    <li><a href="javascript:f_addTab('zhandian1','地图信息','../baseInfo/sitemap.aspx')">水质</a></li>
+                    <%--                    <li><a href="javascript:f_addTab('zhandian','AQI实时报表','../datacontrol/currentAQI.aspx')">
+                        AQI实时报表</a></li>--%>
+                    <li><a href="javascript:f_addTab('kqrb','空气质量日报','../datacontrol/currentAQI.aspx')">
+                        空气质量日报</a></li>
+                    <%--<li><a href="javascript:f_addTab('shuizhi','水质','../baseInfo/sitemap.aspx')">水质</a></li>--%>
                 </ul>
             </div>
             <div title="站点运行管理" iconcss="menu-icon-member">
                 <ul class="nlist">
                     <li><a href="javascript:f_addTab('zhandianyunxing','站点运行信息','../datacontrol/Currentdata.aspx')">
                         站点运行信息</a></li>
-                    <li><a href="">站点信息</a></li>
+                    <li><a href="javascript:f_addTab('siteinfo','站点运行信息','../siteinfo/site_list.aspx')">
+                        站点信息维护</a></li>
                 </ul>
             </div>
             <div title="报警管理" iconcss="menu-icon-member">
@@ -227,6 +229,12 @@
                         数据审核通过</a></li>
                 </ul>
             </div>
+            <div title="公告管理" iconcss="menu-icon-member">
+                <ul class="nlist">
+                    <li><a href="javascript:f_addTab('datashenhe','公示公告','../gonggao/gonggao_list.aspx')">
+                        公示公告</a></li>
+                </ul>
+            </div>
             <div title="对外接口" iconcss="menu-icon-setting">
                 <ul class="nlist">
                     <li><a class="l-link" href="javascript:f_addTab('data_query','对外接口','project/query/data_query.aspx')">
@@ -236,7 +244,7 @@
         </div>
         <div position="center" id="framecenter" toolsid="tab-tools-nav">
             <div tabid="home" title="管理中心" iconcss="tab-icon-home" style="height: 300px">
-                <iframe frameborder="0" name="sysMain" src="center.aspx"></iframe>
+                <iframe frameborder="0" name="sysMain" src="../baseInfo/sitemap.aspx"></iframe>
             </div>
         </div>
         <div position="bottom" class="footer">

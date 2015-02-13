@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gonggao_edit.aspx.cs" Inherits="DTcms.web.gonggao.gonggao_edit" %>
-<%@ Import namespace="Eazytec.Common"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gonggao_edit.aspx.cs" Inherits="DTcms.Web.gonggao.gonggao_edit" %>
+<%@ Import namespace="DTcms.Common"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
