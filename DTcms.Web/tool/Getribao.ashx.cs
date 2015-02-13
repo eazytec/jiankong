@@ -23,11 +23,13 @@ namespace DTcms.Web.tool
             string endDate = context.Request["endDate"];
             string zc = context.Request["zcc"];
             string SiteHtml = siteid + "§";
+            
             try
             {
 
                 DateTime kDate = DateTime.Parse(beginDate);
                 DateTime jDate = DateTime.Parse(endDate);
+                
                 //日期循环
                 //DateTime endDate = DateTime.Parse(txt2.Text.Trim());
                 string sql = "select * from stationInfo where stationId='" + siteid + "' ";
@@ -37,44 +39,54 @@ namespace DTcms.Web.tool
                 if (ds.Rows.Count <= 0) SiteHtml = "<br /><br /><span style='color:gray;'>没有找到相关信息！</span><br /><br /><br />";
 
                 SiteHtml += "<table cellpadding='1' border='1' cellspacing='1' style='width:100%;height:100%;BORDER-COLLAPSE:collapse' >";
-
+                if (zc == "1")
+                {
+                    SiteHtml += "<tr><td style=' text-align:center;' colspan='17'>" + ds.Rows[0]["stationName"].ToString() + "</td></tr>";
+                    SiteHtml += "<tr><td style=' text-align:center;'>日期</td><td colspan='2' style=' text-align:center;'>SO2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>SN2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>PM10（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>CO（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>O3（最大1小时平均）</td><td colspan='2' style=' text-align:center;'>O3（最大8小时平均）</td><td colspan='2' style=' text-align:center;'>PM2.5（24小时平均浓度）</td><td rowspan='2' style=' text-align:center;'>AQI</td><td rowspan='2' style=' text-align:center;'>首要污染物</td></tr>";
+                    SiteHtml += "<tr><td style='text-align:center;'></td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td></tr>";
+                }
+                else
+                {
+                    SiteHtml += "<tr><td style=' text-align:center;' colspan='16'>" + ds.Rows[0]["stationName"].ToString() + "</td></tr>";
+                    SiteHtml += "<tr><td colspan='2' style=' text-align:center;'>SO2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>SN2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>PM10（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>CO（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>O3（最大1小时平均）</td><td colspan='2' style=' text-align:center;'>O3（最大8小时平均）</td><td colspan='2' style=' text-align:center;'>PM2.5（24小时平均浓度）</td><td rowspan='2' style=' text-align:center;'>AQI</td><td rowspan='2' style=' text-align:center;'>首要污染物</td></tr>";
+                    SiteHtml += "<tr><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td><td style='text-align:center'>浓度</td><td style='text-align:center'>分指数</td></tr>";
+                }
                while (kDate <= jDate)
                {
                DateTime date = DateTime.Parse(kDate.ToShortDateString());
-              
+
                string convertdate = date.ToString();
+
+               convertdate = convertdate.Substring(0,10); 
                
-               string str = BLL.jsnd.jisuannongdu(convertdate, siteid);
-              
+               string str=BLL.jsnd.jisuannongdu(convertdate,siteid);
+
+           //  string str = "pm,2.4;so2,2;";
+
                string[] strData=str.Split(';');
+
+
+
+               SiteHtml += "<tr>";
 
                if (zc == "1")
                {
-                   SiteHtml += "<tr><td style=' text-align:center;' colspan='17'>" + ds.Rows[0]["stationName"].ToString() + "</td></tr>";
-                   SiteHtml += "<tr><td style=' text-align:center;'>日期</td><td colspan='2' style=' text-align:center;'>SO2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>SN2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>PM10（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>CO（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>O3（最大1小时平均）</td><td colspan='2' style=' text-align:center;'>O3（最大8小时平均）</td><td colspan='2' style=' text-align:center;'>PM2.5（24小时平均浓度）</td></tr>";
+                   SiteHtml += "<td style='text-align:center;'>" + convertdate + "</td>";
+      
                }
-               else
-               {
-                   SiteHtml += "<tr><td style=' text-align:center;' colspan='16'>" + ds.Rows[0]["stationName"].ToString() + "</td></tr>";
-                   SiteHtml += "<tr><td colspan='2' style=' text-align:center;'>SO2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>SN2（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>PM10（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>CO（24小时平均浓度）</td><td colspan='2' style=' text-align:center;'>O3（最大1小时平均）</td><td colspan='2' style=' text-align:center;'>O3（最大8小时平均）</td><td colspan='2' style=' text-align:center;'>PM2.5（24小时平均浓度）</td></tr>";
-               } 
-
-                
-                for(int i=0;i<strData.Length;i++)
+               for(int i=0;i<strData.Length-1;i++)
                 {
                   string[] singleStrData=strData[i].Split(',');
                   string canshu = singleStrData[0];
                   string nongdu = singleStrData[1];
+                  SiteHtml += "<td style='text-align:center;'>" + nongdu + "</td>";
+                  SiteHtml += "<td style='text-align:center;'>分指数</td>";
                 }
+                SiteHtml += "</tr>";
 
                kDate = kDate.AddDays(1);
                }
-
                 //string sss = "2";
-
-                if (ds.Rows.Count <= 0) SiteHtml = "<br /><br /><span style='color:gray;'>没有找到相关信息！</span><br /><br /><br />";
-
-                SiteHtml += "<table cellpadding='1' border='1' cellspacing='1' style='width:100%;height:100%;BORDER-COLLAPSE:collapse' >";
 
                 //while (kDate <= jDate)
                 //{

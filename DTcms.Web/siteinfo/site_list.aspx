@@ -11,7 +11,7 @@
 <link href="../admin/images/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../scripts/ui/js/ligerBuild.min.js"></script>
 <script type="text/javascript" src="../js/function.js"></script>
-<script src="/Calendar/JS/calendar2.js" type="text/javascript"></script>
+<script src="../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
 </head>
 <body class="mainbody">
 <form id="form1" runat="server">
@@ -19,20 +19,20 @@
     <div class="tools_box">
 	    <div class="tools_bar">
             <div class="search_box">
-            <span>站点编号</span>
+            <span>站点名称</span>
             <span>
-            <asp:TextBox ID="txtTitle"  runat="server" CssClass="txtInput"></asp:TextBox>  
+            <asp:TextBox ID="txtstationName"  runat="server" CssClass="txtInput"></asp:TextBox>  
             </span>
                  <span>时间：</span> 
                   <span>
-                      <asp:TextBox ID="txtBegindate" onfocus="setday(this)" runat="server" CssClass="txtInput"></asp:TextBox>  
+                      <asp:TextBox ID="txtBegindate" onclick="WdatePicker()" runat="server" CssClass="txtInput"></asp:TextBox>  
                   </span>                   
                 <span>至
-                <asp:TextBox ID="txtEnddate" onfocus="setday(this)" runat="server" CssClass="txtInput"></asp:TextBox>
+                <asp:TextBox ID="txtEnddate" onclick="WdatePicker()" runat="server" CssClass="txtInput"></asp:TextBox>
                     </span>
                 <asp:Button ID="btnSearch" runat="server" Text="搜 索" CssClass="btnSearch" onclick="btnSearch_Click"/>
 		    </div>
-           <a href="gonggao_edit.aspx?action=<%=DTEnums.ActionEnum.Add %>" class="tools_btn"><span><b class="add">添加公告</b></span></a>
+           <a href="site_edit.aspx?action=<%=DTEnums.ActionEnum.Add %>" class="tools_btn"><span><b class="add">添加站点</b></span></a>
 		    <a href="javascript:void(0);" onclick="checkAll(this);" class="tools_btn"><span><b class="all">全选</b></span></a>
             <asp:LinkButton ID="btnDelete" runat="server" CssClass="tools_btn"  
                 OnClientClick="return ExePostBack('btnDelete');" onclick="btnDelete_Click"><span><b class="delete">批量删除</b></span></asp:LinkButton>
@@ -60,7 +60,7 @@
         <td align="center"><%#Eval("stationName")%></td>
         <td align="center"><%#Eval("stationType")%></td>
         <td align="center"><%#Eval("createTime")%></td>
-        <td align="center"><a href="gonggao_edit.aspx?action=<%#DTEnums.ActionEnum.Edit %>&id=<%#Eval("id")%>">修改</a></td>
+        <td align="center"><a href="site_edit.aspx?action=<%#DTEnums.ActionEnum.Edit %>&id=<%#Eval("id")%>">修改</a></td>
       </tr>
     </ItemTemplate>
     <FooterTemplate>

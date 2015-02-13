@@ -11,11 +11,11 @@
     <script type="text/javascript" src="../scripts/jquery/messages_cn.js"></script>
     <script type="text/javascript" src="../scripts/ui/js/ligerBuild.min.js"></script>
     <script type="text/javascript" src="../js/function.js"></script>
-    <script type="text/javascript" src="../js/WdatePicker.js"></script>
+    <script src="../js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
     <script type="text/javascript">
         //表单验证
         $(function () {
-            $("#form1").validate({
+            $("#form1").validate({KJ
                 invalidHandler: function (e, validator) {
                     parent.jsprint("有 " + validator.numberOfInvalids() + " 项填写有误，请检查！", "", "Warning");
                 },
@@ -81,7 +81,7 @@
                             站点编号：
                         </th>
                         <td>
-                            <asp:TextBox ID="txtTitle" runat="server" CssClass="txtInput normal" minlength="2"
+                            <asp:TextBox ID="txtStationId" runat="server" CssClass="txtInput normal" minlength="2"
                                 MaxLength="100" />
                         </td>
                     </tr>
@@ -90,8 +90,7 @@
                             站点名称：
                         </th>
                         <td>
-                            <asp:TextBox ID="txtContent" runat="server" CssClass="small" TextMode="MultiLine"
-                                MaxLength="255"></asp:TextBox><label></label>
+                            <asp:TextBox ID="txtStationName" runat="server" CssClass="txtInput normal" MaxLength="255"></asp:TextBox><label></label>
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +98,7 @@
                             站点类型：
                         </th>
                         <td>
-                            <asp:TextBox ID="txtName" runat="server" CssClass="txtInput normal " MaxLength="50"></asp:TextBox><label></label>
+                            <asp:TextBox ID="txtStationType" runat="server" CssClass="txtInput normal " MaxLength="50"></asp:TextBox><label></label>
                         </td>
                     </tr>
                     <tr>
@@ -107,7 +106,7 @@
                             创建时间:
                         </th>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="txtInput normal " MaxLength="50"></asp:TextBox><label></label>
+                            <asp:TextBox ID="txtCreateTime" runat="server" CssClass="txtInput normal " MaxLength="50" onclick="WdatePicker()"></asp:TextBox><label></label>
                         </td>
                     </tr>
                 </tbody>

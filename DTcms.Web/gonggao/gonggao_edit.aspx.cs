@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using DTcms.Common;
 
-namespace DTcms.web.gonggao
+namespace DTcms.Web.gonggao
 {
     public partial class gonggao_edit : Web.UI.ManagePage
     {

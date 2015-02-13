@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace DTcms.web.gonggao {
+namespace DTcms.Web.gonggao {
     
     
     public partial class gonggao_edit {
