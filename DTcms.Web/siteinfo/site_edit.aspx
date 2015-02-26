@@ -15,7 +15,7 @@
     <script type="text/javascript">
         //表单验证
         $(function () {
-            $("#form1").validate({KJ
+            $("#form1").validate(
                 invalidHandler: function (e, validator) {
                     parent.jsprint("有 " + validator.numberOfInvalids() + " 项填写有误，请检查！", "", "Warning");
                 },
