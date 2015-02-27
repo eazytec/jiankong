@@ -193,20 +193,20 @@
             </div>
             <div title="站点数据监控" iconcss="menu-icon-member">
                 <ul class="nlist">
-                    <li><a href="javascript:f_addTab('shishi','实时数据','../datacontrol/Currentdata.aspx')">
+                    <li><a href="javascript:f_addTab('shishishuju','实时数据','../datacontrol/Currentdata.aspx')">
                         实时数据</a></li>
                     <%--                    <li><a href="javascript:f_addTab('zhandian','AQI实时报表','../datacontrol/currentAQI.aspx')">
                         AQI实时报表</a></li>--%>
                     <li><a href="javascript:f_addTab('kqrb','空气质量日报','../datacontrol/currentAQI.aspx')">
                         空气质量日报</a></li>
-                    <%--<li><a href="javascript:f_addTab('shuizhi','水质','../baseInfo/sitemap.aspx')">水质</a></li>--%>
+                    <li><a href="javascript:f_addTab('shuizhi','水质','../datacontrol/shuizhi.aspx')">水质</a></li>
                 </ul>
             </div>
             <div title="站点运行管理" iconcss="menu-icon-member">
                 <ul class="nlist">
                     <li><a href="javascript:f_addTab('zhandianyunxing','站点运行信息','../datacontrol/Currentdata.aspx')">
                         站点运行信息</a></li>
-                    <li><a href="javascript:f_addTab('siteinfo','站点运行信息','../siteinfo/site_list.aspx')">
+                    <li><a href="javascript:f_addTab('siteinfo','站点信息维护','../siteinfo/site_list.aspx')">
                         站点信息维护</a></li>
                 </ul>
             </div>

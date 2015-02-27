@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>编辑会员信息</title>
+<title>编辑公告信息</title>
 <link href="../scripts/ui/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../scripts/jquery/jquery-1.3.2.min.js"></script>
 <link href="../admin/images/style.css" rel="stylesheet" type="text/css" />

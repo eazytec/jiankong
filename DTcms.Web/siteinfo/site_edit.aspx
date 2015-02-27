@@ -15,7 +15,7 @@
     <script type="text/javascript">
         //表单验证
         $(function () {
-            $("#form1").validate(
+            $("#form1").validate({
                 invalidHandler: function (e, validator) {
                     parent.jsprint("有 " + validator.numberOfInvalids() + " 项填写有误，请检查！", "", "Warning");
                 },
@@ -82,7 +82,7 @@
                         </th>
                         <td>
                             <asp:TextBox ID="txtStationId" runat="server" CssClass="txtInput normal" minlength="2"
-                                MaxLength="100" />
+                                MaxLength="100"></asp:TextBox><lable></lable>
                         </td>
                     </tr>
                     <tr>
@@ -103,10 +103,11 @@
                     </tr>
                     <tr>
                         <th>
-                            创建时间:
+                            创建时间：
                         </th>
                         <td>
-                            <asp:TextBox ID="txtCreateTime" runat="server" CssClass="txtInput normal " MaxLength="50" onclick="WdatePicker()"></asp:TextBox><label></label>
+                            <asp:TextBox ID="txtCreateTime" runat="server" CssClass="txtInput normal " MaxLength="50"
+                                onclick="WdatePicker()"></asp:TextBox><label></label>
                         </td>
                     </tr>
                 </tbody>

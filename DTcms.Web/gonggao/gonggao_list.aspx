@@ -20,7 +20,7 @@
     <div class="tools_box">
 	    <div class="tools_bar">
             <div class="search_box">
-            <span>标题</span>
+            <span>标题：</span>
             <span>
             <asp:TextBox ID="txtTitle"  runat="server" CssClass="txtInput"></asp:TextBox>  
             </span>

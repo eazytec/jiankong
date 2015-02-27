@@ -83,29 +83,7 @@ namespace DTcms.Web.gonggao
         }
         #endregion
 
-        #region 返回用户状态===========================
-        protected string GetUserStatus(int is_lock)
-        {
-            string result = string.Empty;
-            switch (is_lock)
-            {
-                case 0:
-                    result = "正常";
-                    break;
-                case 1:
-                    result = "待验证";
-                    break;
-                case 2:
-                    result = "待审核";
-                    break;
-                case 3:
-                    result = "已禁用";
-                    break;
-            }
-            return result;
-        }
-        #endregion
-
+       
         //关健字查询
         protected void btnSearch_Click(object sender, EventArgs e)
         {

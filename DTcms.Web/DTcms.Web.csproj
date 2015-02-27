@@ -224,6 +224,7 @@
     <Content Include="datacontrol\js\开发包\skin\whyGreen\bg.jpg" />
     <Content Include="datacontrol\js\开发包\skin\whyGreen\datepicker.css" />
     <Content Include="datacontrol\js\开发包\skin\whyGreen\img.gif" />
+    <Content Include="datacontrol\shuizhi.aspx" />
     <Content Include="datadownload\baobiao.aspx" />
     <Content Include="datadownload\css\dataTables.tableTools.css" />
     <Content Include="datadownload\css\dataTables.tableTools.min.css" />
@@ -2620,6 +2621,13 @@
     </Compile>
     <Compile Include="datacontrol\Currentdata.aspx.designer.cs">
       <DependentUpon>Currentdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="datacontrol\shuizhi.aspx.cs">
+      <DependentUpon>shuizhi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="datacontrol\shuizhi.aspx.designer.cs">
+      <DependentUpon>shuizhi.aspx</DependentUpon>
     </Compile>
     <Compile Include="datadownload\baobiao.aspx.cs">
       <DependentUpon>baobiao.aspx</DependentUpon>

@@ -66,6 +66,7 @@
     <Compile Include="point_log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="search.cs" />
+    <Compile Include="shuizhi.cs" />
     <Compile Include="siteinfo.cs" />
     <Compile Include="sys_channel.cs" />
     <Compile Include="sys_config.cs" />

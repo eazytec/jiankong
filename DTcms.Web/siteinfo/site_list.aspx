@@ -19,7 +19,7 @@
     <div class="tools_box">
 	    <div class="tools_bar">
             <div class="search_box">
-            <span>站点名称</span>
+            <span>站点名称：</span>
             <span>
             <asp:TextBox ID="txtstationName"  runat="server" CssClass="txtInput"></asp:TextBox>  
             </span>
